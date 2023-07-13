@@ -40,3 +40,4 @@ jobs:
       # Runs a single command using the runners shell
       - name: Say Bye
         run: echo Good bye!
+    needs: [hello]
