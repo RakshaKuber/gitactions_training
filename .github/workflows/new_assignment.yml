@@ -26,6 +26,8 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: new_issue_open
-        env:
-          ISSUE_CONTEXT: ${{toJson.event.issue}}
-        run: echo "$ISSUE_CONTEXT"
+        run: |
+          echo "NEW ISSUE CONTENT"
+          echo "Title: ${{github.event.issue.title}}"
+          echo "Body: ${{github.event.issue.body}}"
+        
