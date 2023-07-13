@@ -26,4 +26,6 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: new_issue_open
-        run: echo New Issue is opened!
+        env:
+          ISSUE_CONTEXT: ${{toJson.event.issue}}
+        run: echo "$ISSUE_CONTEXT"
